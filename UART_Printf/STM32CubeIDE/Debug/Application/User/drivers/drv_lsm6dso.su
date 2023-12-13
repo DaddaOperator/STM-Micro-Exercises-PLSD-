@@ -1,0 +1,2 @@
+../Application/User/drivers/drv_lsm6dso.c:19:9:LSM6DSO_USER_Init	16	static
+../Application/User/drivers/drv_lsm6dso.c:47:9:LSM6DSO_USER_Acc_GetAxes	40	static

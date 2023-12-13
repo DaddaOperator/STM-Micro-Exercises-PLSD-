@@ -1,0 +1,7 @@
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:449:22:LL_AHB2_GRP1_EnableClock	1
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/UART_Printf/Src/main.c:85:5:main	2
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/UART_Printf/Src/main.c:157:6:SystemClock_Config	3
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/UART_Printf/Src/main.c:206:13:MX_USART2_UART_Init	5
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/UART_Printf/Src/main.c:254:13:MX_GPIO_Init	1
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/UART_Printf/Src/main.c:294:1:__io_putchar	1
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/UART_Printf/Src/main.c:310:6:Error_Handler	1

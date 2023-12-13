@@ -1,0 +1,3 @@
+../Application/User/drivers/drv_hts221.c:18:6:HTS221_USER_Init	8	static
+../Application/User/drivers/drv_hts221.c:33:7:HTS221_Read_Temperature	16	static
+../Application/User/drivers/drv_hts221.c:41:7:HTS221_Read_Humidity	16	static

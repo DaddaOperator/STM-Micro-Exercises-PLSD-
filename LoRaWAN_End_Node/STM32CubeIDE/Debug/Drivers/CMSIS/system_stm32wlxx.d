@@ -1,5 +1,5 @@
 Drivers/CMSIS/system_stm32wlxx.o: \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Core/Src/system_stm32wlxx.c \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Core/Src/system_stm32wlxx.c \
  ../../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wlxx.h \
  ../../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wl55xx.h \
  ../../Drivers/CMSIS/Include/core_cm4.h \

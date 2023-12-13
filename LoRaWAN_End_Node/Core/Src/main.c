@@ -5,7 +5,11 @@
   * @brief          : Main program body
   ******************************************************************************
   * @attention
+<<<<<<< HEAD
   *teststtstststststtsts
+=======
+  * test
+>>>>>>> 9c73f922f79ee9a07b0827e59db83ae23734aed5
   * Copyright (c) 2021 STMicroelectronics.
   * All rights reserved.
   *

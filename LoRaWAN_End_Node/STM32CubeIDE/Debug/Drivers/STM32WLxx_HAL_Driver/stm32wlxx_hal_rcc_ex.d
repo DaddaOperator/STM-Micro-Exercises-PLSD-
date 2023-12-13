@@ -1,5 +1,5 @@
 Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_rcc_ex.o: \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.c \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc_ex.c \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h \
  ../../Core/Inc/stm32wlxx_hal_conf.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_dma.h \

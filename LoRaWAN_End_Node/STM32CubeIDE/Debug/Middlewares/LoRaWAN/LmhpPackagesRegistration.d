@@ -1,5 +1,5 @@
 Middlewares/LoRaWAN/LmhpPackagesRegistration.o: \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhpPackagesRegistration.c \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhpPackagesRegistration.c \
  ../../Core/Inc/platform.h \
  ../../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wlxx.h \
  ../../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wl55xx.h \
@@ -49,8 +49,8 @@ Middlewares/LoRaWAN/LmhpPackagesRegistration.o: \
  ../../Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h \
  ../../Core/Inc/stm32wlxx_nucleo_conf.h \
  ../../Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhpPackagesRegistration.h \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhPackage.h \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhpPackagesRegistration.h \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhPackage.h \
  ../../Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacInterfaces.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h \
@@ -122,8 +122,8 @@ Middlewares/LoRaWAN/LmhpPackagesRegistration.o: \
 ../../Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h:
 ../../Core/Inc/stm32wlxx_nucleo_conf.h:
 ../../Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h:
-C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhpPackagesRegistration.h:
-C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhPackage.h:
+C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhpPackagesRegistration.h:
+C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhPackage.h:
 ../../Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacInterfaces.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h:

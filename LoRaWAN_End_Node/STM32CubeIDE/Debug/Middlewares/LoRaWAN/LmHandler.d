@@ -1,5 +1,5 @@
 Middlewares/LoRaWAN/LmHandler.o: \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.c \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.c \
  ../../Middlewares/Third_Party/LoRaWAN/Utilities/utilities.h \
  ../../Core/Inc/utilities_conf.h \
  ../../Drivers/CMSIS/Include/cmsis_compiler.h \
@@ -10,7 +10,7 @@ Middlewares/LoRaWAN/LmHandler.o: \
  ../../LoRaWAN/App/se-identity.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacVersion.h \
  ../../LoRaWAN/Target/lorawan_conf.h \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/NvmDataMgmt.h \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/NvmDataMgmt.h \
  ../../Middlewares/Third_Party/SubGHz_Phy/radio.h \
  ../../Middlewares/Third_Party/SubGHz_Phy/radio_def.h \
  ../../Middlewares/Third_Party/SubGHz_Phy/radio_ex.h \
@@ -32,8 +32,8 @@ Middlewares/LoRaWAN/LmHandler.o: \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMac.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacInterfaces.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTest.h \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.h \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.h \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionVersion.h \
  ../../Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhPackage.h \
  ../../Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h \
@@ -45,7 +45,7 @@ Middlewares/LoRaWAN/LmHandler.o: \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h \
  ../../LoRaWAN/Target/mw_log_conf.h \
  ../../Utilities/trace/adv_trace/stm32_adv_trace.h \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/lorawan_version.h \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/lorawan_version.h \
  ../../LoRaWAN/App/lora_info.h \
  ../../Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhpPackagesRegistration.h
 ../../Middlewares/Third_Party/LoRaWAN/Utilities/utilities.h:
@@ -61,7 +61,7 @@ Middlewares/LoRaWAN/LmHandler.o: \
 ../../LoRaWAN/App/se-identity.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacVersion.h:
 ../../LoRaWAN/Target/lorawan_conf.h:
-C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/NvmDataMgmt.h:
+C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/NvmDataMgmt.h:
 ../../Middlewares/Third_Party/SubGHz_Phy/radio.h:
 ../../Middlewares/Third_Party/SubGHz_Phy/radio_def.h:
 ../../Middlewares/Third_Party/SubGHz_Phy/radio_ex.h:
@@ -84,8 +84,8 @@ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMac.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacInterfaces.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTest.h:
-C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.h:
-C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h:
+C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandler.h:
+C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionVersion.h:
 ../../Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhPackage.h:
 ../../Middlewares/Third_Party/LoRaWAN/LmHandler/LmHandlerTypes.h:
@@ -97,6 +97,6 @@ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h:
 ../../LoRaWAN/Target/mw_log_conf.h:
 ../../Utilities/trace/adv_trace/stm32_adv_trace.h:
-C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/lorawan_version.h:
+C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/LmHandler/lorawan_version.h:
 ../../LoRaWAN/App/lora_info.h:
 ../../Middlewares/Third_Party/LoRaWAN/LmHandler/Packages/LmhpPackagesRegistration.h:

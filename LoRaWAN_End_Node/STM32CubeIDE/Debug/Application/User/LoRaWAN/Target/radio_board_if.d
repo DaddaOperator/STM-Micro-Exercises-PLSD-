@@ -1,6 +1,6 @@
 Application/User/LoRaWAN/Target/radio_board_if.o: \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/LoRaWAN/Target/radio_board_if.c \
- C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/LoRaWAN/Target/radio_board_if.h \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/LoRaWAN/Target/radio_board_if.c \
+ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/LoRaWAN/Target/radio_board_if.h \
  ../../Core/Inc/platform.h \
  ../../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wlxx.h \
  ../../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wl55xx.h \
@@ -50,7 +50,7 @@ Application/User/LoRaWAN/Target/radio_board_if.o: \
  ../../Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h \
  ../../Core/Inc/stm32wlxx_nucleo_conf.h \
  ../../Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h
-C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/LoRaWAN/Target/radio_board_if.h:
+C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/LoRaWAN/Target/radio_board_if.h:
 ../../Core/Inc/platform.h:
 ../../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wlxx.h:
 ../../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wl55xx.h:

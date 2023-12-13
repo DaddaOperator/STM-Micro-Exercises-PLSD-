@@ -34,6 +34,8 @@ Middlewares/SubGHz_Phy/radio_fw.o: \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_flash_ex.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_gpio.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_gpio_ex.h \
+ ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h \
+ ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c_ex.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_pwr.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_pwr.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_pwr_ex.h \
@@ -99,6 +101,8 @@ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third
 ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_flash_ex.h:
 ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_gpio.h:
 ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_gpio_ex.h:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c.h:
+../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_i2c_ex.h:
 ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_pwr.h:
 ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_pwr.h:
 ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_pwr_ex.h:

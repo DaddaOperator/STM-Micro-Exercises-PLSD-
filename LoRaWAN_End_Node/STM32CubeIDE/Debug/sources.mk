@@ -26,6 +26,7 @@ Application/User/Core \
 Application/User/LoRaWAN/App \
 Application/User/LoRaWAN/Target \
 Application/User/Startup \
+Drivers/BSP/Components \
 Drivers/BSP/STM32WLxx_Nucleo \
 Drivers/CMSIS \
 Drivers/STM32WLxx_HAL_Driver \

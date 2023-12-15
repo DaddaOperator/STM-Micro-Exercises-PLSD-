@@ -489,6 +489,26 @@
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/Components/hts221/hts221_reg.c</locationURI>
 		</link>
 		<link>
+			<name>Drivers/BSP/Components/lsm6dso.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/Components/lsm6dso/lsm6dso.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/Components/lsm6dso16is.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/Components/lsm6dso16is/lsm6dso16is.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/Components/lsm6dso16is_reg.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/Components/lsm6dso16is/lsm6dso16is_reg.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/BSP/Components/lsm6dso_reg.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/Components/lsm6dso/lsm6dso_reg.c</locationURI>
+		</link>
+		<link>
 			<name>Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.c</locationURI>

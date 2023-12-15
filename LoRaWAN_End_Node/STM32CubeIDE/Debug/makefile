@@ -19,6 +19,7 @@ RM := rm -rf
 -include Application/User/Startup/subdir.mk
 -include Application/User/LoRaWAN/Target/subdir.mk
 -include Application/User/LoRaWAN/App/subdir.mk
+-include Application/User/Drivers/subdir.mk
 -include Application/User/Core/subdir.mk
 -include objects.mk
 

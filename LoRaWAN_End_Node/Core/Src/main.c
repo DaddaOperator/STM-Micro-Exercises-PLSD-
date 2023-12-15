@@ -5,7 +5,7 @@
   * @brief          : Main program body
   ******************************************************************************
   * @attention
-  * test
+  *
   * Copyright (c) 2021 STMicroelectronics.
   * All rights reserved.
   *

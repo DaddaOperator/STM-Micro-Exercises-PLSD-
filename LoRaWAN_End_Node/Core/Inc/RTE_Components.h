@@ -23,6 +23,6 @@
 
 /* Defines ------------------------------------------------------------------*/
 /* STMicroelectronics.X-CUBE-MEMS1.10.0.0 */
-#define HTS221_HUMTEMP_I2C
+#define LSM6DSO16IS_ACCGYRISPU_I2C
 
 #endif /* __RTE_COMPONENTS_H__ */

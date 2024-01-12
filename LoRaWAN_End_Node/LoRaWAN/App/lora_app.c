@@ -34,6 +34,7 @@
 #include "CayenneLpp.h"
 #include "sys_sensors.h"
 #include "flash_if.h"
+#include "drv_lsm6dso.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -594,6 +595,8 @@ static void SendTxData(void)
     CayenneLppCopy(AppData.Buffer);
     AppData.BufferSize = CayenneLppGetSize();
 #else  /* not CAYENNE_LPP */
+
+    //LSM6DSO_USER_Init();
     humidity    = (uint16_t)(sensor_data.humidity * 10);            /* in %*10     */
     temperature = (int16_t)(sensor_data.temperature);
     pressure = (uint16_t)(sensor_data.pressure * 100 / 10); /* in hPa / 10 */

@@ -1,7 +1,7 @@
 Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.o: \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.c \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.c \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h \
  ../../Core/Inc/stm32wlxx_nucleo_conf.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h \
  ../../Core/Inc/stm32wlxx_hal_conf.h \
@@ -45,8 +45,8 @@ Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.o: \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart_ex.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_system.h
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h:
 ../../Core/Inc/stm32wlxx_nucleo_conf.h:
 ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:
 ../../Core/Inc/stm32wlxx_hal_conf.h:

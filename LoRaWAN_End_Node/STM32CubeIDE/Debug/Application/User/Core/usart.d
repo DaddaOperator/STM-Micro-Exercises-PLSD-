@@ -1,5 +1,5 @@
 Application/User/Core/usart.o: \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Core/Src/usart.c \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Core/Src/usart.c \
  ../../Core/Inc/usart.h ../../Core/Inc/main.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h \
  ../../Core/Inc/stm32wlxx_hal_conf.h \

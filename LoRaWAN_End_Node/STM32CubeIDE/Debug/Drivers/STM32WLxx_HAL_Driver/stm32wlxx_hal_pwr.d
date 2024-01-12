@@ -1,5 +1,5 @@
 Drivers/STM32WLxx_HAL_Driver/stm32wlxx_hal_pwr.o: \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.c \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_pwr.c \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h \
  ../../Core/Inc/stm32wlxx_hal_conf.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_dma.h \

@@ -1,5 +1,5 @@
 Application/User/Core/rtc.o: \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Core/Src/rtc.c \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Core/Src/rtc.c \
  ../../Core/Inc/rtc.h ../../Core/Inc/main.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h \
  ../../Core/Inc/stm32wlxx_hal_conf.h \

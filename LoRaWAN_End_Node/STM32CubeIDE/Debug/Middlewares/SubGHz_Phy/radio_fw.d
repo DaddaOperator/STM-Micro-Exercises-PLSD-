@@ -1,12 +1,12 @@
 Middlewares/SubGHz_Phy/radio_fw.o: \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_fw.c \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_fw.c \
  ../../LoRaWAN/Target/timer.h ../../Utilities/timer/stm32_timer.h \
  ../../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../../Drivers/CMSIS/Include/cmsis_gcc.h ../../Core/Inc/utilities_conf.h \
  ../../Utilities/misc/stm32_mem.h \
  ../../Utilities/misc/stm32_tiny_vsnprintf.h \
  ../../Core/Inc/utilities_def.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_fw.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_fw.h \
  ../../Middlewares/Third_Party/SubGHz_Phy/radio_def.h \
  ../../Middlewares/Third_Party/SubGHz_Phy/radio_ex.h \
  ../../LoRaWAN/Target/radio_conf.h ../../Core/Inc/platform.h \
@@ -62,7 +62,7 @@ Middlewares/SubGHz_Phy/radio_fw.o: \
  ../../LoRaWAN/Target/radio_board_if.h ../../Core/Inc/utilities_def.h \
  ../../Core/Inc/sys_debug.h ../../Core/Inc/sys_conf.h \
  ../../Core/Inc/platform.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_driver.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_driver.h \
  ../../LoRaWAN/Target/mw_log_conf.h
 ../../LoRaWAN/Target/timer.h:
 ../../Utilities/timer/stm32_timer.h:
@@ -72,7 +72,7 @@ Middlewares/SubGHz_Phy/radio_fw.o: \
 ../../Utilities/misc/stm32_mem.h:
 ../../Utilities/misc/stm32_tiny_vsnprintf.h:
 ../../Core/Inc/utilities_def.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_fw.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_fw.h:
 ../../Middlewares/Third_Party/SubGHz_Phy/radio_def.h:
 ../../Middlewares/Third_Party/SubGHz_Phy/radio_ex.h:
 ../../LoRaWAN/Target/radio_conf.h:
@@ -132,5 +132,5 @@ C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_
 ../../Core/Inc/sys_debug.h:
 ../../Core/Inc/sys_conf.h:
 ../../Core/Inc/platform.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_driver.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_driver.h:
 ../../LoRaWAN/Target/mw_log_conf.h:

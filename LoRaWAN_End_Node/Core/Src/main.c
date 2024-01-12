@@ -28,6 +28,9 @@
 #include "main.h"
 #include "app_lorawan.h"
 #include "gpio.h"
+#include "drv_lsm6dso.h"
+#include "usart.h"
+#include "stm32wlxx_nucleo_bus.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -51,13 +54,24 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+int32_t acc_x, acc_y, acc_z;
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-/* USER CODE BEGIN PFP */
 
+/* USER CODE BEGIN PFP */
+#if defined(__ICCARM__)
+/* New definition from EWARM V9, compatible with EWARM8 */
+int iar_fputc(int ch);
+#define PUTCHAR_PROTOTYPE int iar_fputc(int ch)
+#elif defined (__CC_ARM) || defined(__ARMCC_VERSION)
+/* ARM Compiler 5/6 */
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#elif defined(__GNUC__)
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#endif /* __ICCARM__ */
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -72,7 +86,6 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -93,6 +106,10 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  //MX_USART2_UART_Init();
+
+  //BSP_I2C2_Init();
+
   MX_LoRaWAN_Init();
   /* USER CODE BEGIN 2 */
 
@@ -104,7 +121,6 @@ int main(void)
   {
     /* USER CODE END WHILE */
     MX_LoRaWAN_Process();
-
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -175,6 +191,16 @@ void Error_Handler(void)
   {
   }
   /* USER CODE END Error_Handler_Debug */
+}
+
+
+PUTCHAR_PROTOTYPE
+{
+  /* Place your implementation of fputc here */
+  /* e.g. write a character to the USART2 and Loop until the end of transmission */
+  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
+
+  return ch;
 }
 
 #ifdef  USE_FULL_ASSERT

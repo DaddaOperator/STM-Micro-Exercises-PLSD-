@@ -1,32 +1,32 @@
 Middlewares/LoRaWAN/LoRaMacClassB.o: \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassB.c \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassB.c \
  ../../Middlewares/Third_Party/LoRaWAN/Utilities/utilities.h \
  ../../Core/Inc/utilities_conf.h \
  ../../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../../Drivers/CMSIS/Include/cmsis_gcc.h ../../Utilities/misc/stm32_mem.h \
  ../../Utilities/misc/stm32_tiny_vsnprintf.h \
  ../../Core/Inc/utilities_def.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/secure-element.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacCrypto.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/secure-element.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacCrypto.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h \
  ../../LoRaWAN/Target/timer.h ../../Utilities/timer/stm32_timer.h \
  ../../LoRaWAN/Target/systime.h ../../Utilities/misc/stm32_systime.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacVersion.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacVersion.h \
  ../../LoRaWAN/Target/lorawan_conf.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacMessageTypes.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacCryptoNvm.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/secure-element-nvm.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacInterfaces.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacMessageTypes.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacCryptoNvm.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/secure-element-nvm.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacInterfaces.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionNvm.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionVersion.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacVersion.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBNvm.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMac.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassB.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBConfig.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacConfirmQueue.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBNvm.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMac.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassB.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBConfig.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacConfirmQueue.h \
  ../../Middlewares/Third_Party/SubGHz_Phy/radio.h \
  ../../Middlewares/Third_Party/SubGHz_Phy/radio_def.h \
  ../../Middlewares/Third_Party/SubGHz_Phy/radio_ex.h \
@@ -45,29 +45,29 @@ Middlewares/LoRaWAN/LoRaMacClassB.o: \
 ../../Utilities/misc/stm32_mem.h:
 ../../Utilities/misc/stm32_tiny_vsnprintf.h:
 ../../Core/Inc/utilities_def.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/secure-element.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacCrypto.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/secure-element.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacCrypto.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h:
 ../../LoRaWAN/Target/timer.h:
 ../../Utilities/timer/stm32_timer.h:
 ../../LoRaWAN/Target/systime.h:
 ../../Utilities/misc/stm32_systime.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacVersion.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacVersion.h:
 ../../LoRaWAN/Target/lorawan_conf.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacMessageTypes.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacCryptoNvm.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/secure-element-nvm.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacInterfaces.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacMessageTypes.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacCryptoNvm.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/secure-element-nvm.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacInterfaces.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionNvm.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionVersion.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacVersion.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBNvm.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMac.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassB.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBConfig.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacConfirmQueue.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBNvm.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMac.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassB.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBConfig.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacConfirmQueue.h:
 ../../Middlewares/Third_Party/SubGHz_Phy/radio.h:
 ../../Middlewares/Third_Party/SubGHz_Phy/radio_def.h:
 ../../Middlewares/Third_Party/SubGHz_Phy/radio_ex.h:

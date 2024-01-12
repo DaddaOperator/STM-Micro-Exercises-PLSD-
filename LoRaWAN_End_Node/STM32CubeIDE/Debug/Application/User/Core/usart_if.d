@@ -1,5 +1,5 @@
 Application/User/Core/usart_if.o: \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Core/Src/usart_if.c \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Core/Src/usart_if.c \
  ../../Core/Inc/usart_if.h \
  ../../Utilities/trace/adv_trace/stm32_adv_trace.h \
  ../../Core/Inc/utilities_conf.h \

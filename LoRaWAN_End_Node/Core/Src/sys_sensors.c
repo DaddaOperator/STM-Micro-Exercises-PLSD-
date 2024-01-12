@@ -162,6 +162,7 @@ int32_t EnvSensors_Init(void)
 {
   int32_t ret = 0;
   /* USER CODE BEGIN EnvSensors_Init */
+  //inizializzazione dei sensori
 #if defined (SENSOR_ENABLED) && (SENSOR_ENABLED == 1)
   /* Init */
 #if (USE_IKS01A2_ENV_SENSOR_HTS221_0 == 1)

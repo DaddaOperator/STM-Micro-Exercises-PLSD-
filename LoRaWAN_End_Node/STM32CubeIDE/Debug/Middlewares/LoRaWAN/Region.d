@@ -1,5 +1,5 @@
 Middlewares/LoRaWAN/Region.o: \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.c \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.c \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacInterfaces.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h \
  ../../LoRaWAN/Target/timer.h ../../Utilities/timer/stm32_timer.h \
@@ -19,13 +19,13 @@ Middlewares/LoRaWAN/Region.o: \
  ../../Middlewares/Third_Party/LoRaWAN/Utilities/utilities.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/secure-element-nvm.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBNvm.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionVersion.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionEU868.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionCommon.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionVersion.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionEU868.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionCommon.h \
  ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionNvm.h \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionUS915.h
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionNvm.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionUS915.h
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacInterfaces.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacTypes.h:
 ../../LoRaWAN/Target/timer.h:
@@ -48,10 +48,10 @@ Middlewares/LoRaWAN/Region.o: \
 ../../Middlewares/Third_Party/LoRaWAN/Utilities/utilities.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/secure-element-nvm.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacClassBNvm.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionVersion.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionEU868.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionCommon.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionVersion.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionEU868.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/Region.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionCommon.h:
 ../../Middlewares/Third_Party/LoRaWAN/Mac/LoRaMacHeaderTypes.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionNvm.h:
-C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionUS915.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionNvm.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Middlewares/Third_Party/LoRaWAN/Mac/Region/RegionUS915.h:

@@ -1,5 +1,5 @@
 Application/User/Core/main.o: \
- C:/Users/alega/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Core/Src/main.c \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/Core/Src/main.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h \
  ../../Core/Inc/stm32wlxx_hal_conf.h \
@@ -44,7 +44,11 @@ Application/User/Core/main.o: \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_uart_ex.h \
  ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_system.h \
  ../../LoRaWAN/App/app_lorawan.h ../../Core/Inc/gpio.h \
- ../../Core/Inc/main.h
+ ../../Core/Inc/main.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/STM32CubeIDE/Application/User/Drivers/drv_lsm6dso.h \
+ ../../Core/Inc/usart.h ../../Core/Inc/stm32wlxx_nucleo_bus.h \
+ ../../Core/Inc/stm32wlxx_nucleo_conf.h \
+ ../../Core/Inc/stm32wlxx_nucleo_errno.h
 ../../Core/Inc/main.h:
 ../../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:
 ../../Core/Inc/stm32wlxx_hal_conf.h:
@@ -91,3 +95,8 @@ Application/User/Core/main.o: \
 ../../LoRaWAN/App/app_lorawan.h:
 ../../Core/Inc/gpio.h:
 ../../Core/Inc/main.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/STM32CubeIDE/Application/User/Drivers/drv_lsm6dso.h:
+../../Core/Inc/usart.h:
+../../Core/Inc/stm32wlxx_nucleo_bus.h:
+../../Core/Inc/stm32wlxx_nucleo_conf.h:
+../../Core/Inc/stm32wlxx_nucleo_errno.h:

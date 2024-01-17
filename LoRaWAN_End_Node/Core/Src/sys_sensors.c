@@ -23,6 +23,7 @@
 #include "platform.h"
 #include "sys_conf.h"
 #include "sys_sensors.h"
+#include "drv_lsm6dso.h"
 #if defined (SENSOR_ENABLED) && (SENSOR_ENABLED == 0)
 #include "adc_if.h"
 #endif /* SENSOR_ENABLED */
@@ -126,6 +127,14 @@ int32_t EnvSensors_Read(sensor_t *sensor_data)
   float TEMPERATURE_Value = TEMPERATURE_DEFAULT_VAL;
   float PRESSURE_Value = PRESSURE_DEFAULT_VAL;
 
+  //Default values
+  int32_t acc_x = 40;
+  int32_t acc_y = 41;
+  int32_t acc_z = 0;
+  int32_t gyr_x = 0;
+  int32_t gyr_y = 43;
+  int32_t gyr_z = 0;
+
 #if defined (SENSOR_ENABLED) && (SENSOR_ENABLED == 1)
 #if (USE_IKS01A2_ENV_SENSOR_HTS221_0 == 1)
   IKS01A2_ENV_SENSOR_GetValue(HTS221_0, ENV_HUMIDITY, &HUMIDITY_Value);
@@ -145,11 +154,18 @@ int32_t EnvSensors_Read(sensor_t *sensor_data)
 #endif /* USE_IKS01A3_ENV_SENSOR_LPS22HH_0 */
 #else
   TEMPERATURE_Value = (SYS_GetTemperatureLevel() >> 8);
+  LSM6DSO_USER_Gyro_GetAxes(&gyr_x, &gyr_y, &gyr_z);
+  LSM6DSO_USER_Acc_GetAxes(&acc_x, &acc_y, &acc_z);
+
 #endif  /* SENSOR_ENABLED */
 
   sensor_data->humidity    = HUMIDITY_Value;
   sensor_data->temperature = TEMPERATURE_Value;
   sensor_data->pressure    = PRESSURE_Value;
+
+  sensor_data->acc_x = acc_x;
+  sensor_data->acc_y = acc_y;
+  sensor_data->gyr_y = gyr_y;
 
   sensor_data->latitude  = (int32_t)((STSOP_LATTITUDE  * MAX_GPS_POS) / 90);
   sensor_data->longitude = (int32_t)((STSOP_LONGITUDE  * MAX_GPS_POS) / 180);

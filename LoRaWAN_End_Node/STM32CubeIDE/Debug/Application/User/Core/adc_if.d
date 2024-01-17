@@ -55,7 +55,8 @@ Application/User/Core/adc_if.o: \
  ../../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../../Utilities/misc/stm32_mem.h \
  ../../Utilities/misc/stm32_tiny_vsnprintf.h \
- ../../Core/Inc/utilities_def.h
+ ../../Core/Inc/utilities_def.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/STM32CubeIDE/Application/User/Drivers/drv_lsm6dso.h
 ../../Core/Inc/adc_if.h:
 ../../Core/Inc/adc.h:
 ../../Core/Inc/main.h:
@@ -115,3 +116,4 @@ Application/User/Core/adc_if.o: \
 ../../Utilities/misc/stm32_mem.h:
 ../../Utilities/misc/stm32_tiny_vsnprintf.h:
 ../../Core/Inc/utilities_def.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/STM32CubeIDE/Application/User/Drivers/drv_lsm6dso.h:

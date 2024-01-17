@@ -12,5 +12,6 @@
 
 int32_t LSM6DSO_USER_Init(void);
 int32_t LSM6DSO_USER_Acc_GetAxes(int32_t *px, int32_t *py, int32_t *pz);
+int32_t LSM6DSO_USER_Gyro_GetAxes(int32_t *px, int32_t *py, int32_t *pz);
 
 #endif /* APPLICATION_USER_DRIVERS_DRV_LSM6DSO_H_ */

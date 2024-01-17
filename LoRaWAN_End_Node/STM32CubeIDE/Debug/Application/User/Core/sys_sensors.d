@@ -50,6 +50,7 @@ Application/User/Core/sys_sensors.o: \
  ../../Core/Inc/stm32wlxx_nucleo_conf.h \
  ../../Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h \
  ../../Core/Inc/sys_conf.h ../../Core/Inc/sys_sensors.h \
+ C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/STM32CubeIDE/Application/User/Drivers/drv_lsm6dso.h \
  ../../Core/Inc/adc_if.h ../../Core/Inc/adc.h ../../Core/Inc/platform.h
 ../../Core/Inc/platform.h:
 ../../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wlxx.h:
@@ -102,6 +103,7 @@ Application/User/Core/sys_sensors.o: \
 ../../Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h:
 ../../Core/Inc/sys_conf.h:
 ../../Core/Inc/sys_sensors.h:
+C:/Users/Utente/STM32CubeIDE/workspace_1.13.2/LoRaWAN_End_Node/STM32CubeIDE/Application/User/Drivers/drv_lsm6dso.h:
 ../../Core/Inc/adc_if.h:
 ../../Core/Inc/adc.h:
 ../../Core/Inc/platform.h:

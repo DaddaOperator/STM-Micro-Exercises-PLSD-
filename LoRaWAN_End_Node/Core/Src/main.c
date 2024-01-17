@@ -108,9 +108,11 @@ int main(void)
   MX_GPIO_Init();
   //MX_USART2_UART_Init();
 
-  //BSP_I2C2_Init();
+  BSP_I2C2_Init();
+  //LSM6DSO_USER_Init();
 
   MX_LoRaWAN_Init();
+
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */

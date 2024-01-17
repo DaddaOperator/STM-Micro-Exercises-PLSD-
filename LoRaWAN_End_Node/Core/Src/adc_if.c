@@ -21,6 +21,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "adc_if.h"
 #include "sys_app.h"
+#include "drv_lsm6dso.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -92,6 +93,20 @@ void SYS_DeInitMeasurement(void)
   /* USER CODE BEGIN SYS_DeInitMeasurement_1 */
 
   /* USER CODE END SYS_DeInitMeasurement_1 */
+}
+
+void SYS_GetAccGyr(int32_t *acc_x, int32_t *acc_y, int32_t *gyr_y)
+{
+
+	// USELESS FUNCTION!!
+
+	int32_t acc_z = 0;
+	int32_t gyr_x = 0;
+	int32_t gyr_z = 0;
+
+	//LSM6DSO_USER_Init();
+	//LSM6DSO_USER_Gyro_GetAxes(&gyr_x, &gyr_y, &gyr_z);
+    //LSM6DSO_USER_Acc_GetAxes(&acc_x, &acc_y, &acc_z);
 }
 
 int16_t SYS_GetTemperatureLevel(void)

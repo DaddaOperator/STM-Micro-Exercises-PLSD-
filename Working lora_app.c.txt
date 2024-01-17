@@ -42,7 +42,7 @@
 
 /* External variables ---------------------------------------------------------*/
 /* USER CODE BEGIN EV */
-int roll_state = 0;
+    int position = 1;
 
 /* USER CODE END EV */
 
@@ -352,8 +352,8 @@ void LoRaWAN_Init(void)
   /* USER CODE BEGIN LoRaWAN_Init_LV */
   uint32_t feature_version = 0UL;
   /* USER CODE END LoRaWAN_Init_LV */
-  /* USER CODE BEGIN LoRaWAN_Init_1 */
   LSM6DSO_USER_Init();
+  /* USER CODE BEGIN LoRaWAN_Init_1 */
 
   /* Get LoRaWAN APP version*/
   APP_LOG(TS_OFF, VLEVEL_M, "APPLICATION_VERSION: V%X.%X.%X\r\n",
@@ -521,15 +521,16 @@ static void OnRxData(LmHandlerAppData_t *appData, LmHandlerRxParams_t *params)
               if (appData->BufferSize == 1)
               {
                 AppLedStateOn = appData->Buffer[0] & 0x01;
-                roll_state = appData->Buffer[0] & 0x01;
                 if (AppLedStateOn == RESET)
                 {
                   APP_LOG(TS_OFF, VLEVEL_H, "LED OFF\r\n");
+                  position = 0;
                   HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_RESET); /* LED_RED */
                 }
-                else //ROLL STATE FALSE
+                else
                 {
                   APP_LOG(TS_OFF, VLEVEL_H, "LED ON\r\n");
+                  position = 1;
                   HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, GPIO_PIN_SET); /* LED_RED */
                 }
               }
@@ -565,10 +566,15 @@ static void SendTxData(void)
 #ifdef CAYENNE_LPP
     uint8_t channel = 0;
 #else
+    /*
+    uint16_t pressure = 0;
+    int16_t temperature = 0;
+    uint16_t humidity = 0;
+    */
 
-    int32_t acc_x;
-    int32_t acc_y;
-    int32_t gyr_y;
+    int32_t acc_x, acc_y, acc_z;
+    int32_t gyr_x, gyr_y, gyr_z;
+    int32_t prova = 1000;
 
     uint32_t i = 0;
     int32_t latitude = 0;
@@ -615,34 +621,34 @@ static void SendTxData(void)
     //temperature = (int16_t)(sensor_data.temperature);
     //pressure = (uint16_t)(sensor_data.temperature * 100 / 10); /* in hPa / 10 */
 
-    acc_x = (int32_t)(sensor_data.acc_x);
-    acc_y = (int32_t)(sensor_data.acc_y);
-    gyr_y = (int32_t)(sensor_data.gyr_y);
-
     AppData.Buffer[i++] = AppLedStateOn;
-    //LSM6DSO_USER_Acc_GetAxes(&acc_x, &acc_y, &acc_z);
+    LSM6DSO_USER_Acc_GetAxes(&acc_x, &acc_y, &acc_z);
 
-    //APP_LOG(TS_ON, VLEVEL_M, "prova:\r\n");
+    prova = prova + 100;
 
-    if (roll_state == 1)
-    {
-        AppData.Buffer[i++] = (uint8_t)((gyr_y >> 24) & 0xFF);
-        AppData.Buffer[i++] = (uint8_t)((gyr_y >> 16) & 0xFF);
-        AppData.Buffer[i++] = (uint8_t)((gyr_y >> 8) & 0xFF);
-        AppData.Buffer[i++] = (uint8_t)(gyr_y & 0xFF);
+    APP_LOG(TS_ON, VLEVEL_M, "prova:%d\r\n", prova);
 
-    }else{
+    /*
+    AppData.Buffer[i++] = (uint8_t)((acc_x >> 24) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)((acc_x >> 16) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)((acc_x >> 8) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)(acc_x & 0xFF);
 
-    	AppData.Buffer[i++] = (uint8_t)((acc_x >> 24) & 0xFF);
-		AppData.Buffer[i++] = (uint8_t)((acc_x >> 16) & 0xFF);
-		AppData.Buffer[i++] = (uint8_t)((acc_x >> 8) & 0xFF);
-		AppData.Buffer[i++] = (uint8_t)(acc_x & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)((acc_y >> 24) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)((acc_y >> 16) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)((acc_y >> 8) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)(acc_y & 0xFF);
 
-		AppData.Buffer[i++] = (uint8_t)((acc_y >> 24) & 0xFF);
-		AppData.Buffer[i++] = (uint8_t)((acc_y >> 16) & 0xFF);
-		AppData.Buffer[i++] = (uint8_t)((acc_y >> 8) & 0xFF);
-		AppData.Buffer[i++] = (uint8_t)(acc_y & 0xFF);
-    }
+    AppData.Buffer[i++] = (uint8_t)((gyr_z >> 24) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)((gyr_z >> 16) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)((gyr_z >> 8) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)(gyr_z & 0xFF);
+    */
+
+    AppData.Buffer[i++] = (uint8_t)((prova >> 24) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)((prova >> 16) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)((prova >> 8) & 0xFF);
+    AppData.Buffer[i++] = (uint8_t)(prova & 0xFF);
 
     if ((LmHandlerParams.ActiveRegion == LORAMAC_REGION_US915) || (LmHandlerParams.ActiveRegion == LORAMAC_REGION_AU915)
         || (LmHandlerParams.ActiveRegion == LORAMAC_REGION_AS923))

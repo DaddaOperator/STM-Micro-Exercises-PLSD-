@@ -91,6 +91,7 @@ int16_t SYS_GetTemperatureLevel(void);
 uint16_t SYS_GetBatteryLevel(void);
 
 /* USER CODE BEGIN EFP */
+void SYS_GetAccGyr(int32_t *acc_x, int32_t *acc_y, int32_t *gyr_y);
 
 /* USER CODE END EFP */
 

@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx, wrapfig, subcaption}
+\graphicspath{ {./images/} }
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+\usepackage{mwe}
+
+\setlength{\emergencystretch}{30pt}
+
+
+\begin{document}
+
+% Pagina iniziale
+\begin{titlepage}
+  \centering
+  \includegraphics[width=0.15\textwidth]{uniprLogo.png}\par\vspace{1cm}
+  {\LARGE \textsc{Università di Parma}\par}
+	\vspace{1cm}
+	{\Large \textsc{Progetto PLSD}\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Random Number Generator\par}
+	\vspace{2cm}
+	{\Large\itshape Davide Reverberi, Alessandro Galloni\par}
+
+	\vfill
+\end{titlepage}
+
+% Indice
+\tableofcontents
+
+% Sezioni
+\include{sections/obiettivo}
+\include{sections/components}
+\include{sections/codice_scheda}
+\include{sections/codice_client}
+\include{sections/funzionamento}
+
+
+\end{document}

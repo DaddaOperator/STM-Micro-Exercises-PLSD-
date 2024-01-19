@@ -1,5 +1,13 @@
 \section{Obiettivo Progetto}
-
+Si vuole realizzare un sistema nel quale il microcontrollore comunichi in modo bilaterale con un client mqtt tramite rete LoRa.
+\\Il sistema genererà un numero casuale, basato sul risultato del lancio di $n$ dadi. Il sistema gestirà la quantità dei dadi e il loro lancio. Il client provvederà un'interfaccia grafica interattiva, in cui sarà possibile visualizzare la quantità dei dadi e il risultato del loro lancio. ?PULSANTI?
+\\Sono previste due modalità di funzionamento:
+\begin{itemize}
+  \item una che si occuperà di gestire la quantità dei dadi: bisognerà inclinare verso destra o sinistra per incrementare o decrementare la quantità
+  \item una che si occuperà del lancio di essi: per lanciare i dadi, bisognerà scuotere la scheda
+\end{itemize}
+Il uC leggerà la modalità dal cloud, e in base ad essa invierà dati diversi.
+\\Il client riceverà i dati e in base alla modalità li processerà in modo diverso. Quando si premerà il tasto per cambiare modalità, il client invierà al cloud il valore della nuova modalità scelta.
 
 
 

@@ -56,6 +56,15 @@ mostrando il payload inviato al cloud e i dettagli della comunicazione downlink 
     \caption{Messaggio in console mostrato al cambiamento di stato}
     \label{fig:ConsoleDownLink}
 \end{figure}
+% Output console così?
+\begin{verbatim}
+{'downlinks': [{'f_port': 2, 'priority': 'NORMAL', 'frm_payload': 'AA=='}]}
+
+topic:
+    v3/rev-gallo-application@ttn/devices/eui.......
+payload:
+    ...
+\end{verbatim}
 
 Analogamente, la console mostra la corretta ricezione del payload inviato dalla scheda al client, ad ogni nuova notifica di comunicazione uplink, 
 mostrando a video i dati che permettono l'elaborazione vera e propria da parte del programma, formattati in modo leggibile.\\

@@ -1,4 +1,18 @@
 \section{Client}
+L'applicazione lato client viene sviluppata con il linguaggio di programmazione python, utilizzando l'insieme di moduli Pygame 
+per la realizzazione dell'interfaccia grafica. (Ulteriori informazioni su pygame \href{https://www.pygame.org/}{https://www.pygame.org/})
+\\\\Nel codice viene implementata la logica per garantire le funzionalità dell'applicazione, come l'interfaccia grafica, l'acquisizione 
+dei dati dei sensori derivanti dal cloud, il cambiamento di stato e altre.\\\\
+Lo stato corrente viene mantenuto da specifiche variabili di stato, che vengono modificate nel momento in cui si verificano eventi gestiti dai moduli pygame
+(interazione del mouse con un pulsante presente sullo schermo). Inoltre, vengono mantenute ulteriori informazioni sui dati dell'applicazione in precise variabili:
+
+\begin{verbatim}
+roll_state = False      # variabile di stato corrente
+dice_quantity = 1       # numero di dadi da lanciare
+dice_state = []         # stato dei dadi usciti: es [6, 3, 1]
+dice_generate = False   # lancia la funzione di generaz dadi
+result = 0              # risultato finale
+\end{verbatim}
 
 \subsection{Gestione Uplink}
 
@@ -7,6 +21,17 @@
 
 
 \subsection{Interfaccia grafica}
+L'interfaccia grafica viene implementata utilizzando i moduli per la generazione di elementi grafici messi a disposizione da pygame.
+La scelta stilistica di utilizzare pygame è giustificata dalla necessità di rendere l'esperienza dell'utente più intuitiva possibile.
+L'interfaccia grafica è realizzata in modo dinamico, per fare in modo che al cambiamento di stato del sistema, si modifichi in tempo reale.
+\\\\Entrando nei dettagli della struttura del codice, l'interfaccia viene aggiornata con un massimo di 60 fotogrammi al secondo dalla funzione:
+\begin{verbatim}
+clock.tick(60)
+\end{verbatim}
+Nell'interfaccia grafica non vengono volutamente riportati i dettagli che riguardano la comunicazione tra il cloud e il client, ma solamente le funzionalità
+indispensabili per una buona esperienza utente. 
+
+
 
 
 

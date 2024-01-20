@@ -1,11 +1,10 @@
 \section{Client}
 L'applicazione lato client viene sviluppata con il linguaggio di programmazione python, utilizzando l'insieme di moduli Pygame 
-per la realizzazione dell'interfaccia grafica. (Ulteriori informazioni su pygame \href{https://www.pygame.org/}{https://www.pygame.org/})
+per la realizzazione dell'interfaccia grafica. (Ulteriori informazioni su pygame al link \href{https://www.pygame.org/}{https://www.pygame.org/})
 \\\\Nel codice viene implementata la logica per garantire le funzionalità dell'applicazione, come l'interfaccia grafica, l'acquisizione 
-dei dati dei sensori derivanti dal cloud, il cambiamento di stato e altre.\\\\
+dei dati dei sensori derivanti dal cloud, il cambiamento di stato e l'acquisizione degli input dell'utente.\\\\
 Lo stato corrente viene mantenuto da specifiche variabili di stato, che vengono modificate nel momento in cui si verificano eventi gestiti dai moduli pygame
 (interazione del mouse con un pulsante presente sullo schermo). Inoltre, vengono mantenute ulteriori informazioni sui dati dell'applicazione in precise variabili:
-
 \begin{verbatim}
 roll_state = False      # variabile di stato corrente
 dice_quantity = 1       # numero di dadi da lanciare
@@ -13,11 +12,42 @@ dice_state = []         # stato dei dadi usciti: es [6, 3, 1]
 dice_generate = False   # lancia la funzione di generaz dadi
 result = 0              # risultato finale
 \end{verbatim}
+Nel complesso, il client realizzato permette di gestire la comunicazione bilaterale di dati tra il cloud e il microcontrollore, sfruttando
+il protocollo di comunicazione LoRa. Le funzioni che permettono la connessione del client con il cloud sono definite dal protocollo 
+di messaggistica MQTT, progettato esclusivamente per fini legati all IoT.
+Di seguito vengono si riportano brevemente le implementazioni software che riguardano la gestione della comunicazione
+\textbf{uplink} e \textbf{downlink}.
 
 \subsection{Gestione Uplink}
+La gestione della comunicazione dei dati dal uC al cloud (e di conseguenza client) lato software viene gestita attraverso la funzione di callback 
+\textit{on\_message()}, richiamata ad ogni nuovo messaggio ricevuto dall'applicazione lato cloud. Partendo dal presupposto che il payload ricevuto
+dipende dallo stato corrente dell'applicazione, nella funzione di callback viene implementata la logica per l'elaborazione dei dati inviati dall' uC in base al valore
+della variabile di stato \textit{roll\_state}. Successivamente viene poi convertito il payload ricevuto in stringhe leggibili e stampato il valore della variabili, 
+dopo i dovuti shift eseguiti sull'array contenente il payload.
+\\\\Di seguito si riporta l'esempio per l'acquisizione della coordinata y dell'accelerazione dal payload dati ricevuto in cloud e la sua 
+successiva elaborazione, per cambiare lo stato corrente del sistema:\\\\
+\begin{verbatim}
+if roll_state == True:
+    gyr_y = (((((message_bytes[1] << 24) | message_bytes[2] << 16)
+     | message_bytes[3] << 8) | message_bytes[4] ) & 0xFFFFFFFF)  
 
+    if gyr_y & 0x80000000:
+        gyr_y = gyr_y - 0x100000000
+        print("gy: " + str(gyr_y) + "dice_generate: ", dice_generate)
+        if abs(gyr_y) > 40000:
+            dice_generate = True
+\end{verbatim}
+I passaggi illustrati vengono analogamente replicati per l'acquisizione dei dati (\textit{acc\_x, acc\_y}) relativi all'inclinazione della scheda
+quando \textit{roll\_state = False}, ovvero quando il sistema è nella modalità di scelta dei dadi.
+\\\\Si può quindi affermare che la comunicazione uplink viene gestita interamente nella funzione asincrona di callback, ma ha influenza 
+sullo stato corrente del sistema e quindi anche sulla visualizzazione grafica dell'interfaccia utente e sulla comunicazione downlink.
 
 \subsection{Gestione Downlink}
+La gestione della comunicazione di dati dal client python al uC (passando per il cloud), è invece implementata nel ciclo infinito \textit{while True}, 
+del programma, dove sono presenti anche le funzioni di pygame per l'implementazione grafica dell'interfaccia utente.
+Lo stato corrente può quindi essere cambiato in qualsialsi momento dall'utente che interagisce con il client, premendo con il mouse sul pulsante
+apposito contrassegnato con "Change mode". Nel momento in cui si rileva questo evento, viene generato il payload corrispondente allo stato che viene 
+scelto dall'utente e successivamente inviato al cloud, in attesa che il microcontrollore lo riceva.
 
 
 \subsection{Interfaccia grafica}

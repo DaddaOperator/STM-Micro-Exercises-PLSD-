@@ -23,7 +23,7 @@ La gestione della comunicazione dei dati dal uC al cloud (e di conseguenza clien
 \textit{on\_message()}, richiamata ad ogni nuovo messaggio ricevuto dall'applicazione lato cloud. Partendo dal presupposto che il payload ricevuto
 dipende dallo stato corrente dell'applicazione, nella funzione di callback viene implementata la logica per l'elaborazione dei dati inviati dall' uC in base al valore
 della variabile di stato \textit{roll\_state}. Successivamente viene poi convertito il payload ricevuto in stringhe leggibili e stampato il valore della variabili, 
-dopo i dovuti shift eseguiti sull'array contenente il payload.
+dopo i dovuti shift eseguiti sull'array contenente il payload, per ottenere correttamente i dati.
 \\\\Di seguito si riporta l'esempio per l'acquisizione della coordinata y dell'accelerazione dal payload dati ricevuto in cloud e la sua 
 successiva elaborazione, per cambiare lo stato corrente del sistema:\\\\
 \begin{verbatim}
@@ -43,11 +43,37 @@ quando \textit{roll\_state = False}, ovvero quando il sistema è nella modalità
 sullo stato corrente del sistema e quindi anche sulla visualizzazione grafica dell'interfaccia utente e sulla comunicazione downlink.
 
 \subsection{Gestione Downlink}
-La gestione della comunicazione di dati dal client python al uC (passando per il cloud), è invece implementata nel ciclo infinito \textit{while True}, 
+La gestione della comunicazione di dati dal client python al uC (passando per il cloud), è invece implementata nel ciclo infinito \textit{while True} 
 del programma, dove sono presenti anche le funzioni di pygame per l'implementazione grafica dell'interfaccia utente.
-Lo stato corrente può quindi essere cambiato in qualsialsi momento dall'utente che interagisce con il client, premendo con il mouse sul pulsante
+\\\\Lo stato corrente può essere cambiato in qualsialsi momento dall'utente che interagisce con il client, premendo con il mouse sul pulsante
 apposito contrassegnato con "Change mode". Nel momento in cui si rileva questo evento, viene generato il payload corrispondente allo stato che viene 
 scelto dall'utente e successivamente inviato al cloud, in attesa che il microcontrollore lo riceva.
+\\\\Di seguito è riportata la parte di codice in cui viene creato e inviato il payload al cloud per la comunicazione downlink:
+\begin{verbatim}
+if event.type == pygame.MOUSEBUTTONDOWN:
+    if changeState_button.collidepoint(pygame.mouse.get_pos()):
+        roll_state = not roll_state
+
+        if roll_state == False:
+            payload[0] = 0
+            downlinks["downlinks"][0]["frm_payload"] = 
+                base64.b64encode(payload).decode('utf8')
+        else:
+            payload[0] = 1
+            downlinks["downlinks"][0]["frm_payload"] = 
+                base64.b64encode(payload).decode('utf8')
+        print("\r\n" + str(downlinks) + "\r\n")
+
+        topic = "v3/" + CFG_APP_ID_AT_TTN + "/devices/" + 
+            CFG_DEVICE_ID + "/down/push"
+        client.publish(topic, json.dumps(downlinks))
+\end{verbatim}
+Come è possibile vedere dal codice, il payload da inviare al cloud viene organizzato nella struttura dati \textit{downlinks} e successivamente trasformato in un json
+formattato in modo preciso per soddisfare la formattazione standard di un topic di tipo MQTT.\\\\
+NOTA: Si è scelto di implementare la logica della comunicazione downlink in un ciclo temporizzato per 60 fotogrammi al secondo per esigenza di 
+visualizzare in tempo reale i cambiamenti di stato nell'interfaccia grafica. Un'idea di ottimizzazione del progetto potrebbe essere
+quella di svincolare i messaggi verso il cloud relativi al cambiamento di stato dalla grafica e quindi ridurre la frequenza con cui questi possono essere potenzialmente
+inviati al cloud, dal momento che la frequenza di lettura dei dati del microcontrollore si aggira intorno a pochi secondi, non così frequente come il ciclo di aggiornamento della grafica.
 
 
 \subsection{Interfaccia grafica}
@@ -60,6 +86,8 @@ clock.tick(60)
 \end{verbatim}
 Nell'interfaccia grafica non vengono volutamente riportati i dettagli che riguardano la comunicazione tra il cloud e il client, ma solamente le funzionalità
 indispensabili per una buona esperienza utente. 
+
+%Implementazione dei bottoni Change mode e reset?
 
 
 

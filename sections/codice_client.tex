@@ -15,7 +15,7 @@ result = 0              # risultato finale
 Nel complesso, il client realizzato permette di gestire la comunicazione bilaterale di dati tra il cloud e il microcontrollore, sfruttando
 il protocollo di comunicazione LoRa. Le funzioni che permettono la connessione del client con il cloud sono definite dal protocollo 
 di messaggistica MQTT, progettato esclusivamente per fini legati all IoT.
-Di seguito vengono si riportano brevemente le implementazioni software che riguardano la gestione della comunicazione
+Di seguito si riportano brevemente le implementazioni software che riguardano la gestione della comunicazione
 \textbf{uplink} e \textbf{downlink}.
 
 \subsection{Gestione Uplink}
@@ -80,14 +80,41 @@ inviati al cloud, dal momento che la frequenza di lettura dei dati del microcont
 L'interfaccia grafica viene implementata utilizzando i moduli per la generazione di elementi grafici messi a disposizione da pygame.
 La scelta stilistica di utilizzare pygame è giustificata dalla necessità di rendere l'esperienza dell'utente più intuitiva possibile.
 L'interfaccia grafica è realizzata in modo dinamico, per fare in modo che al cambiamento di stato del sistema, si modifichi in tempo reale.
-\\\\Entrando nei dettagli della struttura del codice, l'interfaccia viene aggiornata con un massimo di 60 fotogrammi al secondo dalla funzione:
+\\\\La grafica realizzata presenta un pulsante per poter passare dallo stato di scelta dei dadi allo stato di lancio e un pulsante per resettare il risultato
+e ritornare nella situazione iniziale, necessario per poter effettuare un nuovo lancio una volta ottenuto un risultato.
+\\\\Di seguito è riportato un esempio dell'interfaccia grafica realizzata con le funzioni di pygame, in cui si mostra il risultato di un lancio dei dadi:
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.7\textwidth]{RollStateON3.png}}
+    \caption{Interfaccia grafica dell'applicazione}
+    \label{fig:RollStateON3}
+\end{figure}
+Entrando nei dettagli della struttura del codice, l'interfaccia viene aggiornata con un massimo di 60 fotogrammi al secondo dalla funzione:
 \begin{verbatim}
 clock.tick(60)
+\end{verbatim}
+In ciascuno di questi fotogrammi vengono generati gli elementi grafici attraverso le apposite funzioni di pygame:
+\begin{itemize}
+    \item \Verb#pygame.draw.rect()# per disegnare sullo schermo gli oggetti di tipo Rect precedentemente creati (bottoni)
+    \item \Verb#screen.blit()# per disporre sullo schermo i testi creati in precedenza. (screen è l'oggetto che identifica lo schermo)
+\end{itemize}
+Ad ogni fotogramma viene inoltre implementata una logica per la disposizione corretta dei dadi nello spazio, dipendente dal numero di dadi attualmente
+selezionati per il lancio espressi nella variabile \textit{dice\_quantity}. Per garantire una disposizione simmetrica dei dadi si immagina di
+suddividere lo spazio in una matrice 3 righe e 3 colonne da cui, con precise formule matematiche si può ricavare la coordinata precisa di generazione di ciascun dado:
+\begin{verbatim}
+for i in range(0, dice_quantity):
+    n_cols = 3
+    dice_x = 40 + (i % n_cols)*170 # 40 = x di partenza + 
+        (100 + 70 = dimensione dado + spazio tra i dadi)
+    dice_y = 200 + (i // n_cols)*120
+    if dice_state == []:
+        screen.blit(dice_surfaces[0], (dice_x, dice_y))
+    else:
+        screen.blit(dice_surfaces[dice_state[i]], (dice_x, dice_y))
 \end{verbatim}
 Nell'interfaccia grafica non vengono volutamente riportati i dettagli che riguardano la comunicazione tra il cloud e il client, ma solamente le funzionalità
 indispensabili per una buona esperienza utente. 
 
-%Implementazione dei bottoni Change mode e reset?
 
 
 

@@ -100,7 +100,7 @@ In ciascuno di questi fotogrammi vengono generati gli elementi grafici attravers
 \end{itemize}
 Ad ogni fotogramma viene inoltre implementata una logica per la disposizione corretta dei dadi nello spazio, dipendente dal numero di dadi attualmente
 selezionati per il lancio espressi nella variabile \textit{dice\_quantity}. Per garantire una disposizione simmetrica dei dadi si immagina di
-suddividere lo spazio in una matrice 3 righe e 3 colonne da cui, con precise formule matematiche si può ricavare la coordinata precisa di generazione di ciascun dado:
+suddividere lo spazio in una matrice 2 righe e 3 colonne da cui, con precise formule matematiche si può ricavare la coordinata precisa di generazione di ciascun dado:
 \begin{verbatim}
 for i in range(0, dice_quantity):
     n_cols = 3

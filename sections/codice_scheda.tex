@@ -1,18 +1,36 @@
 \section{Software Microcontrollore}
 Il codice per la programmazione del microcontrollore si sviluppa dall'applicazione di base LoRaWAN\_End\_Node che fornisce
 le funzioni necessarie per l'inizializzazione dei componenti nececessari e la comunicazione del microcontrollore attraverso il protocollo LoRa.
-
+\\\\Per poter leggere i dati che si intendono acquisire dai sensori si è reso necessario organizzare e riformulare parte di codice per l'inizializzazione e il funzionamento del sensore
+di accelerazione e il giroscopio. Nei prossimi paragrafi vengono rispettivamente presentate la strategia di collegamento dei sensori selezionati, la lettura dei dati, 
+le modifiche apportate al codice per poter comunicare correttamente con il cloud, e il meccanismo grazie al quale si è reso possibile iniviare e ricevere i dati dal cloud.
 
 \subsection{Gestione/lettura sensori}
+% BREVE SCALETTA:
+% 1) Descrizione breve del collegamento hardware e del bus I2C
 
+% 2) Descrizione delle funzioni per l'inizializzazione e l' acquisizione dei sensori dall'almbiente esterno
+% -Cenno a LSM6DSO_USER_Init() e la sua posizione nel codice
+% -Cenno LSM6DSO_USER_Acc_GetAxes() e LSM6DSO_USER_Gyro_GetAxes()
+
+% 3) Descrizione della funzione EnvSensorRead() e della struttura dati sensor_data per la lettura del sensore
 
 \subsection{LoRaWAN}
+% Breve descrizione del protocollo di rete
+% -LoRaWAN_Init() per l'aggiornamento delle variabili
+% -Cenno al DutyCicle per il tempo di lettura delle variabili? --> 3-4s ottimale
   
   \subsubsection{Uplink scheda}
+  % Descrizione della funzione SendTxData
+  % -Riferimento a variabile roll_state per decidere che dati inviare
+  % -Strategia operativa per inserire i dati di sensor_data nel buffer
 
 
   \subsubsection{Downlink scheda}
-
+  % Descrizione della funzione OnRxData:
+  % -Riferimento a Variabile roll_state
+  % -Lettura del buffer
+  % -Accensione del led sulla scheda e cambiamento di stato
 
 
 

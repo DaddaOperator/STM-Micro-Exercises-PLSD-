@@ -1,0 +1,3 @@
+../Application/User/Drivers/drv_lsm6dso.c:19:9:LSM6DSO_USER_Init	16	static
+../Application/User/Drivers/drv_lsm6dso.c:53:9:LSM6DSO_USER_Acc_GetAxes	32	static
+../Application/User/Drivers/drv_lsm6dso.c:68:9:LSM6DSO_USER_Gyro_GetAxes	32	static

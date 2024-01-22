@@ -18,7 +18,7 @@ di messaggistica MQTT, progettato esclusivamente per fini legati all IoT.
 Di seguito si riportano brevemente le implementazioni software che riguardano la gestione della comunicazione
 \textbf{uplink} e \textbf{downlink}.
 
-\subsection{Gestione Uplink}
+\subsection{Ricezione dati cloud-to-client}
 La gestione della comunicazione dei dati dal uC al cloud (e di conseguenza client) lato software viene gestita attraverso la funzione di callback 
 \textit{on\_message()}, richiamata ad ogni nuovo messaggio ricevuto dall'applicazione lato cloud. Partendo dal presupposto che il payload ricevuto
 dipende dallo stato corrente dell'applicazione, nella funzione di callback viene implementata la logica per l'elaborazione dei dati inviati dall' uC in base al valore
@@ -42,7 +42,7 @@ quando \textit{roll\_state = False}, ovvero quando il sistema è nella modalità
 \\\\Si può quindi affermare che la comunicazione uplink viene gestita interamente nella funzione asincrona di callback, ma ha influenza 
 sullo stato corrente del sistema e quindi anche sulla visualizzazione grafica dell'interfaccia utente e sulla comunicazione downlink.
 
-\subsection{Gestione Downlink}
+\subsection{Invio dati client-to-cloud}
 La gestione della comunicazione di dati dal client python al uC (passando per il cloud), è invece implementata nel ciclo infinito \textit{while True} 
 del programma, dove sono presenti anche le funzioni di pygame per l'implementazione grafica dell'interfaccia utente.
 \\\\Lo stato corrente può essere cambiato in qualsialsi momento dall'utente che interagisce con il client, premendo con il mouse sul pulsante

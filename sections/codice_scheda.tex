@@ -8,6 +8,8 @@ le modifiche apportate al codice per poter comunicare correttamente con il cloud
 \subsection{Lettura sensori}\label{ssec:sensori}
 % BREVE SCALETTA:
 % 1) Descrizione breve del collegamento hardware e del bus I2C
+Per fare in modo che il microcontrollore riceva i dati acquisiti dai sensori, è stato effettuato il collegamento hardware tra i due componenti con i pin specifici della scheda (PA11 e PA12) 
+adibiti alla comunicazione attraverso bus I2C. Una volta completato questo passaggio, con l'integrazione dei driver del sensore X-CUBE-MEMS1 si è resa possibile l'effettiva comunicazione.
 
 % 2) Descrizione delle funzioni per l'inizializzazione e l' acquisizione dei sensori dall'almbiente esterno
 % -Cenno a LSM6DSO_USER_Init() e la sua posizione nel codice
@@ -33,7 +35,7 @@ I dati che si intendono inviare al cloud sono racchiusi nella variabile \Verb|se
   \label{fig:sensor_t}
 \end{figure}
 \\La funzione \Verb|EnvSensorRead| (definita nel file \textit{sys\_sensor.c} e riportata in Figura \ref{fig:envsensorread}) legge i dati dei sensori e li scrive nella variabile \Verb|sensor_data| (passata tramite puntatore). Questi dati saranno poi processati nella funzione \Verb|SendTxData| (vedi Sezione \ref{sssec:uplink_scheda}).
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   \includegraphics[width=0.9\textwidth]{EnvSensorRead.png}
   \caption{Parte della funzione EnvSensorRead}
@@ -45,18 +47,53 @@ I dati che si intendono inviare al cloud sono racchiusi nella variabile \Verb|se
 % -LoRaWAN_Init() per l'aggiornamento delle variabili
 % -Cenno al DutyCicle per il tempo di lettura delle variabili? --> 3-4s ottimale
 % File utili: main.c app_lorawan.c lora_app.c
+Il uC, una volta connesso ad un gateway LoRa, invia i dati al cloud ogni 10 secondi (quantità definita dalla costante \Verb|APP_TX_DUTYCICLE| nel file \textit{lora\_app.h}) mentre legge i dati in entrata appena vengono caricati sul cloud dal client.
+\\Un'idea per ottenere un interfaccia grafica e di conseguenza un programma più performante potrebbe essere quella di abbassare il dutycicle a pochi secondi.
 
   \subsubsection{Uplink scheda}\label{sssec:uplink_scheda}
   % Descrizione della funzione SendTxData
   % -Riferimento a variabile roll_state per decidere che dati inviare
   % -Strategia operativa per inserire i dati di sensor_data nel buffer
+  Il uC invierà al cloud i valori presenti nella variabile \Verb|AppData.Buffer|, un array di \Verb|uint8_t|, i cui valori sono definiti nella funzione \Verb|SendTxData| (all'interno del file \textit{lora\_app.c}).
+  \\Dato che i valori letti dai sensori (\Verb|acc_x|, \Verb|acc_y| e \Verb|gyr_y|) sono di tipo \Verb|int32_t| e gli elementi del buffer sono di tipo \Verb|uint8_t|, bisogna scrivere all'interno del buffer 8 bit alla volta partendo dai più significativi. Un esempio grafico di come vengono suddivisi è riportato in Figura \ref{fig:int32tobuffer}.
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{spiegazione_scrittura_int32.png}
+    \caption{Come valori di tipo int32\_t vengono suddivi e scritti sul Buffer}
+    \label{fig:int32tobuffer}
+  \end{figure}
+  \\Nella funzione \Verb|SendTxData| riportata in Figura \ref{fig:sendtxdata}, vengono definiti i valori del buffer.
+  \\Il primo elemento del buffer (\Verb|AppData.Buffer[0]|) rappresenta lo stato della modalità.
+  \\I valori dei sensori da scrivere sul buffer dipendono dallo stato della variabile \Verb|roll_state| (il cui valore viene modificato quando il uC riceve dati dal cloud. Vedi Sezione \ref{sssec:downlink_scheda}):
+  \begin{itemize}
+    \item \Verb|roll_state| $=1$ indica che la modalità attiva è quella del lancio dei dadi
+          \begin{itemize}
+            \item il valore di \Verb|gyr_y| sarà scritto negli elementi di \Verb|AppData.Buffer[]| con indice tra 1 e 4.
+          \end{itemize}
+    \item \Verb|roll_state| $=0$ indica che la modalità attiva è quella di selezione della quantità dei dadi da lanciare
+          \begin{itemize}
+            \item sul buffer verrano scritti i valori di \Verb|acc_x| e \Verb|acc_y| agli indici 1$\div$4 e 5$\div$8 di \Verb|AppData.Buffer[]| rispettivamente.
+          \end{itemize}
+  \end{itemize}
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{SendTxData.png}
+    \caption{Parte della funzione SendTxData}
+    \label{fig:sendtxdata}
+  \end{figure}
 
 
-  \subsubsection{Downlink scheda}
+  \subsubsection{Downlink scheda}\label{sssec:downlink_scheda}
   % Descrizione della funzione OnRxData:
   % -Riferimento a Variabile roll_state
   % -Lettura del buffer
   % -Accensione del led sulla scheda e cambiamento di stato
-
-
+  I dati provenienti dal cloud sono processati nella funzione \Verb|OnRxData| (all'interno del file \textit{lora\_app.c} e riportata in Figura \ref{fig:onrxdata}).
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{OnRxData.png}
+    \caption{Parte della funzione OnRxData}
+    \label{fig:onrxdata}
+  \end{figure}
+  \\Qui viene letto l'elemento presente all'indice 0 del buffer, il quale indica la modalità di funzionamento del sistema, e viene scritto sulle variabili \Verb|roll_state| e \Verb|AppLedStateOn| (che determina l'accensione o lo spegnimento del LED\_3 della scheda).
 

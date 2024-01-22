@@ -20,9 +20,9 @@ Di seguito si riportano brevemente le implementazioni software che riguardano la
 
 \subsection{Ricezione dati cloud-to-client}
 La gestione della comunicazione dei dati dal uC al cloud (e di conseguenza client) lato software viene gestita attraverso la funzione di callback 
-\textit{on\_message()}, richiamata ad ogni nuovo messaggio ricevuto dall'applicazione lato cloud. Partendo dal presupposto che il payload ricevuto
+\Verb|on\_message()|, richiamata ad ogni nuovo messaggio ricevuto dall'applicazione lato cloud. Partendo dal presupposto che il payload ricevuto
 dipende dallo stato corrente dell'applicazione, nella funzione di callback viene implementata la logica per l'elaborazione dei dati inviati dall' uC in base al valore
-della variabile di stato \textit{roll\_state}. Successivamente viene poi convertito il payload ricevuto in stringhe leggibili e stampato il valore della variabili, 
+della variabile di stato \Verb|roll\_state|. Successivamente viene poi convertito il payload ricevuto in stringhe leggibili e stampato il valore della variabili, 
 dopo i dovuti shift eseguiti sull'array contenente il payload, per ottenere correttamente i dati.
 \\\\Di seguito si riporta l'esempio per l'acquisizione della coordinata y dell'accelerazione dal payload dati ricevuto in cloud e la sua 
 successiva elaborazione, per cambiare lo stato corrente del sistema:\\\\
@@ -37,13 +37,13 @@ if roll_state == True:
         if abs(gyr_y) > 40000:
             dice_generate = True
 \end{verbatim}
-I passaggi illustrati vengono analogamente replicati per l'acquisizione dei dati (\textit{acc\_x, acc\_y}) relativi all'inclinazione della scheda
-quando \textit{roll\_state = False}, ovvero quando il sistema è nella modalità di scelta dei dadi.
+I passaggi illustrati vengono analogamente replicati per l'acquisizione dei dati (\Verb|acc\_x|, \Verb|acc\_y|) relativi all'inclinazione della scheda
+quando \Verb|roll_state = False|, ovvero quando il sistema è nella modalità di scelta dei dadi.
 \\\\Si può quindi affermare che la comunicazione uplink viene gestita interamente nella funzione asincrona di callback, ma ha influenza 
 sullo stato corrente del sistema e quindi anche sulla visualizzazione grafica dell'interfaccia utente e sulla comunicazione downlink.
 
 \subsection{Invio dati client-to-cloud}
-La gestione della comunicazione di dati dal client python al uC (passando per il cloud), è invece implementata nel ciclo infinito \textit{while True} 
+La gestione della comunicazione di dati dal client python al uC (passando per il cloud), è invece implementata nel ciclo infinito \Verb|while True| 
 del programma, dove sono presenti anche le funzioni di pygame per l'implementazione grafica dell'interfaccia utente.
 \\\\Lo stato corrente può essere cambiato in qualsialsi momento dall'utente che interagisce con il client, premendo con il mouse sul pulsante
 apposito contrassegnato con "Change mode". Nel momento in cui si rileva questo evento, viene generato il payload corrispondente allo stato che viene 
@@ -68,7 +68,7 @@ if event.type == pygame.MOUSEBUTTONDOWN:
             CFG_DEVICE_ID + "/down/push"
         client.publish(topic, json.dumps(downlinks))
 \end{verbatim}
-Come è possibile vedere dal codice, il payload da inviare al cloud viene organizzato nella struttura dati \textit{downlinks} e successivamente trasformato in un json
+Come è possibile vedere dal codice, il payload da inviare al cloud viene organizzato nella struttura dati \Verb|downlinks| e successivamente trasformato in un json
 formattato in modo preciso per soddisfare la formattazione standard di un topic di tipo MQTT.\\\\
 NOTA: Si è scelto di implementare la logica della comunicazione downlink in un ciclo temporizzato per 60 fotogrammi al secondo per esigenza di 
 visualizzare in tempo reale i cambiamenti di stato nell'interfaccia grafica. Un'idea di ottimizzazione del progetto potrebbe essere
@@ -99,7 +99,7 @@ In ciascuno di questi fotogrammi vengono generati gli elementi grafici attravers
     \item \Verb#screen.blit()# per disporre sullo schermo i testi creati in precedenza. (screen è l'oggetto che identifica lo schermo)
 \end{itemize}
 Ad ogni fotogramma viene inoltre implementata una logica per la disposizione corretta dei dadi nello spazio, dipendente dal numero di dadi attualmente
-selezionati per il lancio espressi nella variabile \textit{dice\_quantity}. Per garantire una disposizione simmetrica dei dadi si immagina di
+selezionati per il lancio espressi nella variabile \Verb|dice\_quantity|. Per garantire una disposizione simmetrica dei dadi si immagina di
 suddividere lo spazio in una matrice 2 righe e 3 colonne da cui, con precise formule matematiche si può ricavare la coordinata precisa di generazione di ciascun dado:
 \begin{verbatim}
 for i in range(0, dice_quantity):

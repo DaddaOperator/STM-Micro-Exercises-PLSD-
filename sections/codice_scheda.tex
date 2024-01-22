@@ -25,14 +25,14 @@ Per leggere i dati misurati dall'accelerometro e dal giroscopio, sono state svil
   \item \Verb|BSP_I2C2_Init()| nel \textit{main.c}
 \end{itemize}
 % 3) Descrizione della funzione EnvSensorRead() e della struttura dati sensor_data per la lettura del sensore
-I dati che si intendono inviare al cloud sono racchiusi nella variabile \Verb|sensor_data| (presente in Figura \ref{fig:envsensorread}) di tipo \Verb|sensor_t|. La struttura di \Verb|sensor_t| è riportata in Figura \ref{fig:sensor_t} ed è stata modificata aggiungendole i campi \Verb|acc_x|, \Verb|acc_y| e \Verb|gyr_y|, necessari al funzionamento del nostro sistema.
+I dati che si intendono inviare al cloud sono racchiusi nella variabile \Verb|sensor_data| (presente in Figura \ref{fig:envsensorread}) di tipo \Verb|sensor_t|. La struttura di \Verb|sensor_t|, riportata in Figura \ref{fig:sensor_t} è definita nel file \textit{sys\_sensor.h} ed è stata modificata aggiungendole i campi \Verb|acc_x|, \Verb|acc_y| e \Verb|gyr_y|, necessari al funzionamento del nostro sistema.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.7\textwidth]{sensor_t.png}
   \caption{Struttura dati sensor\_t}
   \label{fig:sensor_t}
 \end{figure}
-\\La funzione \Verb|EnvSensorRead| (riportata in Figura \ref{fig:envsensorread}) legge i dati dei sensori e li scrive nella variabile \Verb|sensor_data| (passata tramite puntatore). Questi dati saranno poi processati nella funzione \Verb|SendTxData| (vedi Sezione \ref{sssec:uplink_scheda}).
+\\La funzione \Verb|EnvSensorRead| (definita nel file \textit{sys\_sensor.c} e riportata in Figura \ref{fig:envsensorread}) legge i dati dei sensori e li scrive nella variabile \Verb|sensor_data| (passata tramite puntatore). Questi dati saranno poi processati nella funzione \Verb|SendTxData| (vedi Sezione \ref{sssec:uplink_scheda}).
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.9\textwidth]{EnvSensorRead.png}
@@ -44,7 +44,7 @@ I dati che si intendono inviare al cloud sono racchiusi nella variabile \Verb|se
 % Breve descrizione del protocollo di rete
 % -LoRaWAN_Init() per l'aggiornamento delle variabili
 % -Cenno al DutyCicle per il tempo di lettura delle variabili? --> 3-4s ottimale
-% File utili: main.c app_lorawan.c lora_app.c sys_sensor.h sys_sensor.c
+% File utili: main.c app_lorawan.c lora_app.c
 
   \subsubsection{Uplink scheda}\label{sssec:uplink_scheda}
   % Descrizione della funzione SendTxData

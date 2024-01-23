@@ -17,7 +17,7 @@ adibiti alla comunicazione attraverso bus I2C. Una volta completato questo passa
 Per leggere i dati misurati dall'accelerometro e dal giroscopio, sono state sviluppate due funzioni in particolare (riportate in Figura \ref{fig:lettura_sensori}). Queste due funzioni leggono i dati dell'accelerometro e del giroscopio rispettivamente e restituiscono un "exit code" uguale a zero se la lettura è stata completata con successo. I valori letti vengono scritti sulle tre variabili passate tramite puntatore.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.75\textwidth]{getDataFunctions.png}
+  \includegraphics[width=0.9\textwidth]{getDataFunctions.png}
   \caption{Funzioni di lettura dei sensori}
   \label{fig:lettura_sensori}
 \end{figure}
@@ -28,14 +28,14 @@ Per leggere i dati misurati dall'accelerometro e dal giroscopio, sono state svil
 \end{itemize}
 % 3) Descrizione della funzione EnvSensorRead() e della struttura dati sensor_data per la lettura del sensore
 I dati che si intendono inviare al cloud sono racchiusi nella variabile \Verb|sensor_data| (presente in Figura \ref{fig:envsensorread}) di tipo \Verb|sensor_t|. La struttura di \Verb|sensor_t|, riportata in Figura \ref{fig:sensor_t} è definita nel file \textit{sys\_sensor.h} ed è stata modificata aggiungendole i campi \Verb|acc_x|, \Verb|acc_y| e \Verb|gyr_y|, necessari al funzionamento del sistema.
-\begin{figure}[h!]
+\\\\La funzione \Verb|EnvSensorRead| (definita nel file \textit{sys\_sensor.c} e riportata in Figura \ref{fig:envsensorread}) legge i dati dei sensori e li scrive nella variabile \Verb|sensor_data| (passata tramite puntatore). Questi dati saranno poi processati nella funzione \Verb|SendTxData| (vedi Sezione \ref{sssec:uplink_scheda}).
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{sensor_t.png}
+  \includegraphics[width=0.8\textwidth]{sensor_t.png}
   \caption{Struttura dati sensor\_t}
   \label{fig:sensor_t}
 \end{figure}
-\\La funzione \Verb|EnvSensorRead| (definita nel file \textit{sys\_sensor.c} e riportata in Figura \ref{fig:envsensorread}) legge i dati dei sensori e li scrive nella variabile \Verb|sensor_data| (passata tramite puntatore). Questi dati saranno poi processati nella funzione \Verb|SendTxData| (vedi Sezione \ref{sssec:uplink_scheda}).
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{EnvSensorRead.png}
   \caption{Parte della funzione EnvSensorRead}

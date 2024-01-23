@@ -29,6 +29,10 @@ Make sure you have python3 downloaded on your machine and install mqtt paho libr
 ```bash
 pip install paho-mqtt
 ```
+Also make sure you have the pygame modules installed correctly on your device
+```bash
+pip install pygame
+```
 Run the client script
 ```bash
 python RandomNumberClient.py

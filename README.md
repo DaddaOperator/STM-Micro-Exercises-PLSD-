@@ -4,7 +4,7 @@ Breve descrizione
 ## Installation
 Install the project with git
 ```bash
-git clone -b <branchname> https://github.com/DaddaOperator/STM-Micro-Exercises_PLSD.git
+git clone -b final-project https://github.com/DaddaOperator/STM-Micro-Exercises_PLSD.git
 ```
 Sezione da finire, nella cartella media ho messo le foto
 

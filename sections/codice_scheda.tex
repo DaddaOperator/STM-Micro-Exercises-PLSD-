@@ -1,6 +1,6 @@
 \section{Software Microcontrollore}
 Il codice per la programmazione del microcontrollore si sviluppa dall'applicazione di base "\textit{LoRaWAN\_End\_Node}" che fornisce
-le funzioni necessarie per l'inizializzazione dei componenti di base e la comunicazione del microcontrollore attraverso il protocollo LoRa.
+le funzioni necessarie per l'inizializzazione dei componenti base per la comunicazione del microcontrollore attraverso il protocollo LoRa.
 \\\\Per poter leggere i dati che si intendono acquisire dai sensori si è reso necessario organizzare e riformulare parte di codice per l'inizializzazione e il funzionamento dell'accelerometro
 e del giroscopio. Nelle sezioni \ref{ssec:sensori} e \ref{ssec:lorawan} vengono rispettivamente presentate la strategia di collegamento e lettura dei sensori selezionati e 
 le modifiche apportate al codice per poter comunicare correttamente con il cloud.
@@ -21,7 +21,7 @@ Per leggere i dati misurati dall'accelerometro e dal giroscopio, sono state svil
   \caption{Funzioni di lettura dei sensori}
   \label{fig:lettura_sensori}
 \end{figure}
-\\Affinché queste funzioni operino correttamente, è necessario chiamare richiamare anche altre funzioni di inizializzazione:
+\\Affinché queste funzioni operino correttamente, è necessario richiamare anche altre funzioni di inizializzazione:
 \begin{itemize}
   \item \Verb|LSM6DSO_USER_Init()| all'interno della funzione \Verb|LoRaWAN_Init| (dichiarata nel file \textit{lora\_app.c})
   \item \Verb|BSP_I2C2_Init()| nel \textit{main.c}
@@ -54,23 +54,23 @@ Il uC, una volta connesso ad un gateway LoRa, invia i dati al cloud ogni 10 seco
   % Descrizione della funzione SendTxData
   % -Riferimento a variabile roll_state per decidere che dati inviare
   % -Strategia operativa per inserire i dati di sensor_data nel buffer
-  Il uC invierà al cloud i valori presenti nella variabile \Verb|AppData.Buffer|, un array di tipo \Verb|uint8_t|, i cui valori sono definiti nella funzione \Verb|SendTxData| (all'interno del file \textit{lora\_app.c}).
-  Dato che i valori letti dai sensori (\Verb|acc_x|, \Verb|acc_y| e \Verb|gyr_y|) sono di tipo \Verb|int32_t| e gli elementi del buffer sono di tipo \Verb|uint8_t|, bisogna scrivere all'interno del buffer 8 bit alla volta partendo dai più significativi. Un esempio grafico di come vengono suddivisi è riportato di seguito in Figura \ref{fig:int32tobuffer}.
+  Il uC invierà al cloud i valori presenti nella variabile \Verb|AppData.Buffer|, un array di tipo \Verb|uint8_t|, i cui valori degli elementi sono definiti nella funzione \Verb|SendTxData| (all'interno del file \textit{lora\_app.c}).
+  Dato che i valori letti dai sensori (\Verb|acc_x|, \Verb|acc_y| e \Verb|gyr_y|) sono di tipo \Verb|int32_t| e gli elementi del buffer sono di tipo \Verb|uint8_t|, bisogna scrivere all'interno del buffer 8 bit alla volta partendo dai più significativi. Un esempio grafico di come i dati di tipo \Verb|int32_t| vengono suddivisi è riportato di seguito in Figura \ref{fig:int32tobuffer}.
   \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{spiegazione_scrittura_int32.png}
     \caption{Come valori di tipo int32\_t vengono suddivi e scritti sul Buffer}
     \label{fig:int32tobuffer}
   \end{figure}
-  Nella funzione \Verb|SendTxData| riportata in Figura \ref{fig:sendtxdata}, vengono invece definiti i valori del buffer:\\
+  Nella funzione \Verb|SendTxData| riportata in Figura \ref{fig:sendtxdata}, vengono invece definiti i valori degli elementi del buffer:\\
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{SendTxData.png}
   \caption{Parte della funzione SendTxData}
   \label{fig:sendtxdata}
 \end{figure}
-Il primo elemento del buffer (\Verb|AppData.Buffer[0]|) rappresenta lo stato del sistema e da esso dipenderanno i valori acquisiti dai sensori che vengono scritti sul buffer.
-  Si utilizza la variabile \Verb|roll_state| per descrivere lo stato del sistiema e il suo valore viene modificato quando l'uC riceve dati dal cloud (Vedi Sezione \ref{sssec:downlink_scheda}):
+Il primo elemento del buffer (\Verb|AppData.Buffer[0]|) rappresenta lo stato del sistema e da esso dipenderanno i valori acquisiti dai sensori che verranno scritti sul buffer.
+  Si utilizza la variabile \Verb|roll_state| per descrivere lo stato della modalità del sistema e il suo valore viene modificato quando l'uC riceve dati dal cloud (Vedi Sezione \ref{sssec:downlink_scheda}):
   \begin{itemize}
     \item \Verb|roll_state| $=1$ indica che la modalità attiva è quella del lancio dei dadi
           \begin{itemize}
@@ -82,7 +82,6 @@ Il primo elemento del buffer (\Verb|AppData.Buffer[0]|) rappresenta lo stato del
           \end{itemize}
   \end{itemize}
 
-\newpage
   \subsubsection{Downlink scheda}\label{sssec:downlink_scheda}
   % Descrizione della funzione OnRxData:
   % -Riferimento a Variabile roll_state

@@ -1,5 +1,7 @@
 # PLSD Project Source Code
-Breve descrizione
+Source code of the Random Number Generator project.
+* The "LoRaWAN_End_Node" folder contains the code of the STM32WL55JC microcontroller
+* The "RandomNumberClient.py" is the client script
 
 ## Installation
 Install the project with git
